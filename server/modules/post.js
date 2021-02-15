@@ -21,7 +21,7 @@ const PostSchema = new mongoose.Schema({
     default: "https://source.unsplash.com/random/301x201"
   },
   date: {
-    type: Date,
+    type: String,
     default: moment().format("YYYY-MM-DD hh:mm:ss"),
 //    default: Date.now, // UTC TimeZone
   },
