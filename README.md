@@ -7,10 +7,8 @@
 - nvm use v14.5.0
 - node --version
 
-### 2. installing Frameworks
-npm i express cors dotenv hpp helmet
-
-npm i @babel/cli @babel/core @babel/node @babel/preset-env babel-loader @babel/polyfill 
-
-npm i morgan nodemon
+### - installing Frameworks
+- npm i express cors dotenv hpp helmet
+- npm i @babel/cli @babel/core @babel/node @babel/preset-env babel-loader @babel/polyfill 
+- npm i morgan nodemon
 
