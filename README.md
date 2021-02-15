@@ -13,5 +13,6 @@ node --version
 ```
 npm i express cors dotenv hpp helmet
 npm i @babel/cli @babel/core @babel/node @babel/preset-env babel-loader @babel/polyfill 
+npm i mongoose moment
 npm i morgan nodemon
 ```
