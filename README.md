@@ -41,7 +41,7 @@ sudo systemctl restart mongod
 ```
 
 ## Setup mern_stack
-Edit .env file for setting  
+Creat/Edit .env file for setting  
 1. MONGO_URI username and password  
 MONGO_URI="mongodb://<username_to_use>:<pwd_to_use>@<mongodb_ip_address>/<db_to_use>?retryWrites=true&w=majority"  
 2. JWT_SECRET  
