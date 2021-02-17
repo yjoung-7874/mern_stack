@@ -40,13 +40,22 @@ db.createUser(
 ## restart mongodb
 sudo systemctl restart mongod
 ```
-### package JSON
+
 ### Setup mern_stack
-please edit .env file for setting username and password
-(MONGO_URI="mongodb://<username_to_use>:<pwd_to_use>@localhost/<db_to_use>?retryWrites=true&w=majority")
+Edit .env file for setting MONGO_URI username and password.
+(ex. MONGO_URI="mongodb://<username_to_use>:<pwd_to_use>@localhost/<db_to_use>?retryWrites=true&w=majority")
 ```
 git clone https://github.com/yjoung-7874/mern_stack
-npm i
+```
+### npm dependencies (package.json)
+dev setup      : @babel/cli, @babel/core, @babel/node, @babel/polyfill, @babel/preset-env, babel-loader  
+env setup      : dotenv  
+security       : hpp, helmet  
+authentication : jsonwebtoken, bcryptjs  
+```npm i```
+
+### Monitoring / Debugging
+```
 ## monitoring using dev script
 ## (package.json : nodemon ./server/server.js --exec babel-node)
 npm run dev
