@@ -45,6 +45,7 @@ sudo systemctl restart mongod
 ```
 git clone https://github.com/yjoung-7874/mern_stack
 npm i
-## monitoring using dev script (package.json : nodemon ./server/server.js --exec babel-node)
+## monitoring using dev script
+## (package.json : nodemon ./server/server.js --exec babel-node)
 npm run dev
 ```
