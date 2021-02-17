@@ -46,10 +46,8 @@ Edit .env file for setting MONGO_URI username and password.
 ```
 git clone https://github.com/yjoung-7874/mern_stack
 ```
-## npm dependencies (package.json)
+**npm dependencies (package.json)**
 ```npm i```  
-
-**Description**  
  dev setup      : @babel/cli, @babel/core, @babel/node, @babel/polyfill, @babel/preset-env, babel-loader, morgan, nodemon  
  env setup      : dotenv  
  web setup      : express  
