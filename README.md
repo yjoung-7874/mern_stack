@@ -28,7 +28,7 @@ sudo systemctl enable mongod
 ```
 ## setup mongodb authentication
 mongo
-use db_name_to_use
+use db_to_use
 db.createUser(
   {
     user: "username_to_use",
@@ -40,8 +40,10 @@ db.createUser(
 ## restart mongodb
 sudo systemctl restart mongod
 ```
-
+### package JSON
 ### Setup mern_stack
+please edit .env file for setting username and password
+(MONGO_URI="mongodb://<username_to_use>:<pwd_to_use>@localhost/<db_to_use>?retryWrites=true&w=majority")
 ```
 git clone https://github.com/yjoung-7874/mern_stack
 npm i
