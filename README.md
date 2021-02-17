@@ -19,7 +19,32 @@ wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add 
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
+
 ## setting up init system (systemd) 
 sudo systemctl start mongod
 sudo systemctl enable mongod
+```
+### - setup authentication for MongoDB instance
+```
+## setup mongodb authentication
+mongo
+use db_name_to_use
+db.createUser(
+  {
+    user: "username_to_use",
+    pwd: "pwd_to_use",
+    roles: [{role: "readWrite", db: "db_to_use"}]
+  }
+)
+
+## restart mongodb
+sudo systemctl restart mongod
+```
+
+### - setup mern_stack
+```
+git clone https://github.com/yjoung-7874/mern_stack
+npm i
+## monitoring using dev script (package.json : nodemon ./server/server.js --exec babel-node)
+npm run dev
 ```
