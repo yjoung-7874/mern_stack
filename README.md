@@ -55,7 +55,8 @@ git clone https://github.com/yjoung-7874/mern_stack
  web setup      : express  
  security       : hpp, helmet  
  authentication : jsonwebtoken, bcryptjs  
-
+ db handling    : mongoose, mongodb  
+ time           : moment
 
 ## Monitoring / Debugging
 ```
