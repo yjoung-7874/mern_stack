@@ -2,7 +2,7 @@
 MongoDB, Express, React, NodeJS full-stack development
 
 ## env setup
-### - installing NodeJS 
+### Installing NodeJS 
 ```
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.bashrc 
@@ -10,7 +10,7 @@ nnvm install v14.5.0
 nvm use v14.5.0
 node --version
 ```
-### - installing MongoDB
+### Installing MongoDB
 by following - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 ```
 ## installing MongoDB
@@ -24,7 +24,7 @@ sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl enable mongod
 ```
-### - setup authentication for MongoDB instance
+### Setup authentication for MongoDB instance
 ```
 ## setup mongodb authentication
 mongo
@@ -41,7 +41,7 @@ db.createUser(
 sudo systemctl restart mongod
 ```
 
-### - setup mern_stack
+### Setup mern_stack
 ```
 git clone https://github.com/yjoung-7874/mern_stack
 npm i
