@@ -2,6 +2,7 @@ import express from 'express'
 
 // model
 import Post from '../../modules/post'
+import auth from '../../middleware/auth'
 
 const router = express.Router()
 
@@ -17,7 +18,7 @@ router.get('/', async(req, res) => {
 });
 
 // add post
-router.post('/', async(req, res, next) => {
+router.post('/', auth, async(req, res, next) => {
   try{
     console.log(req, "req")
     // title = req.body.title, contents = req.body.contents
