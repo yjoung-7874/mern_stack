@@ -6,6 +6,7 @@ import MyRouter from './routes/Router'
 
 // bootstrap : CSS framework
 import "bootstrap/dist/css/bootstrap.min.css";
+import './assets/custom.scss'
 
 const App = () => {
   return (
