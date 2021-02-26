@@ -63,8 +63,12 @@ npm i
 
 ## Monitoring / Debugging
 ```
-## monitoring using dev script
+### monitoring using dev script
 ## (package.json : nodemon ./server/server.js --exec babel-node)
+## "scripts": {
+##   ...
+##   "dev": "nodemon ./server/server.js --exec babel-node --ignore './client'"
+## },
 npm run dev
 ```
 ## Document for FE 
