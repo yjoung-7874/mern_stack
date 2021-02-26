@@ -48,10 +48,10 @@ const LoginModal = () => {
 
   return (
     <div>
-      <NavLink onClick={handleToggle}>Login</NavLink>
+      <NavLink className="text-white" onClick={handleToggle} href='#' active>LOGIN</NavLink>
       <Modal isOpen={modal} toggle={handleToggle}>
         <ModalHeader toggle={handleToggle}>
-          Login
+          LOGIN
         </ModalHeader>
         <ModalBody>
           {localMsg ? <Alert color="danger">{localMsg}</Alert> : null}
@@ -73,7 +73,7 @@ const LoginModal = () => {
                 placeholder="Password"
                 onChange={onChange}
               />
-              <Button color = "dark" style={{marginTop: "2rem"}} block>
+              <Button color="dark" style={{marginTop: "2rem"}} block>
                 LOGIN
               </Button>
             </FormGroup>
