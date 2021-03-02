@@ -1,4 +1,7 @@
-import { CLEAR_ERROR_FAILURE, CLEAR_ERROR_REQUEST, CLEAR_ERROR_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS, LOGOUT_FAILURE, LOGOUT_REQUEST } from "../types"
+import { CLEAR_ERROR_FAILURE, CLEAR_ERROR_REQUEST, CLEAR_ERROR_SUCCESS, 
+        LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, 
+        LOGOUT_SUCCESS, LOGOUT_FAILURE, LOGOUT_REQUEST, 
+        USER_LOADING_FAILURE, USER_LOADING_SUCCESS, USER_LOADING_REQUEST } from "../types"
 
 const initialState = {
   token: localStorage.getItem('token'),
@@ -60,7 +63,6 @@ const authReducer = (state = initialState, action) => {
     case CLEAR_ERROR_REQUEST:
       return {
         ...state,
-        errorMSG: null,
       };
     case CLEAR_ERROR_SUCCESS:
       return {
@@ -71,6 +73,29 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         errorMSG: "Clear error failed",
+      };
+    case USER_LOADING_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case USER_LOADING_SUCCESS:
+      return {
+        ...state,
+        isAuthenticated: true,
+        isLoading: false,
+        user: action.payload,
+        userId: action.payload._id,
+        userName: action.payload.name,
+        userRole: action.payload.role
+      };
+    case USER_LOADING_FAILURE:
+      return {
+        ...state,
+        user: null,
+        isAuthenticated: false,
+        isLoading: false,
+        userRole: "",
       };
     default:
       return state

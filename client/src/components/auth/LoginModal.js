@@ -81,7 +81,7 @@ const LoginModal = () => {
         </ModalBody>
       </Modal>
     </div>
-  )
+  );
 };
 
 export default LoginModal;

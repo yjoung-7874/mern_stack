@@ -42,12 +42,15 @@ sudo systemctl restart mongod
 
 ## Setup mern_stack
 Creat/Edit .env file for setting  
-1. MONGO_URI username and password  
+```
+## 1. MONGO_URI username and password  
 MONGO_URI="mongodb://<username_to_use>:<pwd_to_use>@<mongodb_ip_address>/<db_to_use>?retryWrites=true&w=majority"  
-2. JWT_SECRET  
+## 2. JWT_SECRET  
 JWT_SECRET="<simple_String_line>"  
-3. PORT  
+## 3. PORT  
 PORT="<port_number>"
+```
+Clone and install dependencies  
 ```
 git clone https://github.com/yjoung-7874/mern_stack
 npm i
