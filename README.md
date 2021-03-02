@@ -1,6 +1,7 @@
 # mern_stack
 MongoDB, Express, React, NodeJS full-stack development
 
+# Server setup  
 ## Installing NodeJS 
 ```
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
@@ -73,6 +74,16 @@ npm i
 ##   "dev": "nodemon ./server/server.js --exec babel-node --ignore './client'"
 ## },
 npm run dev
+```
+
+## MongoDB shell examples  
+### MongoDB Collection update
+```
+mongo
+show dbs
+use db_name_to_use
+show collections
+db.collection_name_to_use.update({key_to_find : Content},{$set : {key_to_modify : Content})
 ```
 ## Document for FE 
 ### bootstrap/reactbootstrap  
