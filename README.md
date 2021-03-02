@@ -40,7 +40,15 @@ db.createUser(
 ## restart mongodb
 sudo systemctl restart mongod
 ```
-
+## MongoDB shell examples  
+### MongoDB Collection update
+```
+mongo
+show dbs
+use db_name_to_use
+show collections
+db.collection_name_to_use.update({key_to_find : Content},{$set : {key_to_modify : Content})
+```
 ## Setup mern_stack
 Creat/Edit .env file for setting  
 ```
@@ -76,15 +84,6 @@ npm i
 npm run dev
 ```
 
-## MongoDB shell examples  
-### MongoDB Collection update
-```
-mongo
-show dbs
-use db_name_to_use
-show collections
-db.collection_name_to_use.update({key_to_find : Content},{$set : {key_to_modify : Content})
-```
 ## Document for FE 
 ### bootstrap/reactbootstrap  
 https://reactstrap.github.io  
