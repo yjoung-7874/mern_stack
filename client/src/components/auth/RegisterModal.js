@@ -52,7 +52,7 @@ const RegisterModal = () => {
 
   return (
     <div>
-      <NavLink className="text-white" onClick={handleToggle} href='#' active>REGISTER</NavLink>
+      <NavLink className="text-white" onClick={handleToggle} href="#" active>REGISTER</NavLink>
         <Modal isOpen={modal} toggle={handleToggle}>
           <ModalHeader toggle={handleToggle}>
             REGISTER

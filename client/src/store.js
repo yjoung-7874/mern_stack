@@ -25,7 +25,7 @@ const store = createStore(
   createRootReducer(history),
   initialState,
   composeEnhancer(applyMiddleware(...middlewares))
-)
+);
 
 sagaMiddleware.run(rootSaga) // run sagaMiddleware on ./redux/sagas
 

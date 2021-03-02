@@ -33,19 +33,19 @@ router.post('/', (req, res) => {
       if(!isMatch) return res.status(400).json({msg: "password doesn't matched"})
       jwt.sign({id:user.id}, JWT_SECRET, {expiresIn: "2 days"}, (err, token)=> {
         if(err) throw err;
-	res.json({
+	      res.json({
           token,
           user: {
             id: user.id,
             name: user.name,
             email: user.email,
             role: user.role,
-	  }
-	})
+	        },
+	      });
       })
-    })
-  })
-})
+    });
+  });
+});
 
 router.post('/logout', (req, res) => {
   res.json("successfully logged out")

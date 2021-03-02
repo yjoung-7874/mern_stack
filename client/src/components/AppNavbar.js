@@ -9,7 +9,7 @@ import RegisterModal from './auth/RegisterModal'
 const AppNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const {isAuthenticated, user, userRole} = useSelector((state) => state.auth)
-  //console.log(userRole, "UserRole")
+  console.log(userRole, "UserRole")
   
   const dispatch = useDispatch()
   
