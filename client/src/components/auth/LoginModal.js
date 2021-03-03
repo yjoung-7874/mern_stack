@@ -13,13 +13,6 @@ const LoginModal = () => {
 
   const dispatch = useDispatch()
   const { errorMsg } = useSelector((state) => state.auth)
-  useEffect(() => {
-    try {
-      setLocalMsg(errorMsg)
-    } catch (e) {
-      console.log(e)
-    }
-  }, [errorMsg])
 
   const handleToggle = () => {
     dispatch({
@@ -27,6 +20,16 @@ const LoginModal = () => {
     })
     setModal(!modal)
   }
+
+  useEffect(() => {
+    try {
+      console.log('use_effect')
+      setLocalMsg(errorMsg)
+      console.log(localMsg)
+    } catch (e) {
+      console.log(e)
+    }
+  }, [errorMsg]);
 
   const onChange = (e) => {
     setValues({
@@ -48,13 +51,13 @@ const LoginModal = () => {
 
   return (
     <div>
-      <NavLink className="text-white" onClick={handleToggle} href='#'>LOGIN</NavLink>
+      <NavLink className="text-white" onClick={handleToggle} href="#">LOGIN</NavLink>
       <Modal isOpen={modal} toggle={handleToggle}>
         <ModalHeader toggle={handleToggle}>
           LOGIN
         </ModalHeader>
         <ModalBody>
-          {localMsg ? <Alert color="danger">{localMsg}</Alert> : null}
+          {localMsg ? <Alert color="danger"> {localMsg}</Alert> : null}
           <Form onSubmit={onSubmit}>
             <FormGroup>
               <Label for="email"> Email </Label>

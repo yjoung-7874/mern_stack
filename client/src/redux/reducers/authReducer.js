@@ -71,7 +71,7 @@ const authReducer = (state = initialState, action) => {
     case CLEAR_ERROR_SUCCESS:
       return {
         ...state,
-        errorMSG: null,
+        errorMSG: "",
       };
     case CLEAR_ERROR_FAILURE:
       return {
