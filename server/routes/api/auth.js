@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
     // Validate Password
     bcrypt.compare(password, user.password).then((isMatch) => {
       if(!isMatch) return res.status(400).json({msg: "password doesn't matched"})
-      jwt.sign({id:user.id}, JWT_SECRET, {expiresIn: "2 days"}, (err, token)=> {
+      jwt.sign({id: user.id}, JWT_SECRET, {expiresIn: "2 days"}, (err, token)=> {
         if(err) throw err;
 	      res.json({
           token,

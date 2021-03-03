@@ -5,7 +5,7 @@ import express from 'express'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import config from "../../config/index"
-// Model
+// Modules
 import User from "../../modules/user"
 
 const { JWT_SECRET } = config
@@ -28,10 +28,10 @@ router.get('/', async(req, res) => {
 
 router.post('/', (req, res) => {
   console.log(req)
-  const {name, email, password} = req.body
+  const {name, email, password, role} = req.body
   
   // Simple validation
-  if (!name || !email || !password) {
+  if (!name || !email || !password || !role) {
     return res.status(400).json({msg: "Please fill all field required.."})
   }
   
@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
   User.findOne({email}).then((user) => {
     if(user) return res.status(400).json({msg: "User registered already.."})
     const newUser = new User({
-      name, email, password
+      name, email, password, role
     })
 
     bcrypt.genSalt(10, (err, salt) => {
@@ -58,11 +58,13 @@ router.post('/', (req, res) => {
                 user: {
                   id: user.id,
                   name: user.name,
-                  email: user.email }
-	      })
-	    }
+                  email: user.email,
+                  role: user.role
+                }
+	            })
+	          }
           )
-	})
+	      })
       })
     })
   });
