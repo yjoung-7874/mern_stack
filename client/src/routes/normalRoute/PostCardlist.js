@@ -4,9 +4,10 @@ import { POST_LOADING_REQUEST } from '../../redux/types';
 import { Helmet } from 'react-helmet'
 import { Row } from 'reactstrap';
 import { GrowingSpinner } from '../../components/spinner/Spinner';
+import PostCardOne from '../../components/post/postCardOne';
 
 const PostCardlist = () => {
-  const { posts } = useSelector((state) = state.post);
+  const { posts } = useSelector((state) => state.post);
 
   const dispatch = useDispatch();
 
@@ -17,7 +18,7 @@ const PostCardlist = () => {
   return (
     <div>
       <Helmet title="Home" />
-      <Row>{posts ? <h1>HI</h1> : GrowingSpinner }</Row>
+      <Row>{ posts ? <PostCardOne posts={posts} /> : GrowingSpinner } </Row>
     </div>
   )
 }

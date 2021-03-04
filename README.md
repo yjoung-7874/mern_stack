@@ -89,5 +89,7 @@ npm run dev
 https://reactstrap.github.io  
 https://getbootstrap.com/docs  
 ### Web technology  
-https://developer.mozilla.org/ko/docs/Web
+https://developer.mozilla.org/ko/docs/Web  
+### Font & simbols
+https://fontawesome.com  
 

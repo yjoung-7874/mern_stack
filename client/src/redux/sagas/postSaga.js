@@ -23,6 +23,7 @@ function* loadPosts() {
     //yield push("/")
   }
 }
+
 function* watchLoadPosts() {
   yield takeEvery(POST_LOADING_REQUEST, loadPosts)
 }
