@@ -18,9 +18,9 @@ const PostCardOne = ({posts}) => {
                     <CardTitle className="d-flex justify-content-between">
                       <span className="text-truncate"> {title} </span>
                       <span>
-                          <FontAwesomeIcon icon={faMouse} />
-                          &nbsp;
-                          <span>{views}</span>
+                        <FontAwesomeIcon icon={faMouse} />
+                        &nbsp;
+                        <span>{views}</span>
                       </span>
                     </CardTitle>
                   </CardBody>

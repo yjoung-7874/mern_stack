@@ -41,8 +41,8 @@ const RegisterModal = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    const {name, email, password} = form
-    const newUser = {name, email, password}
+    const {name, email, password, role} = form
+    const newUser = {name, email, password, role}
     console.log(newUser)
     dispatch({
       type: REGISTER_REQUEST,
@@ -83,6 +83,14 @@ const RegisterModal = () => {
                 name="password"
                 id="password"
                 placeholder="Password"
+                onChange={onChange}
+                />
+                <Label for="role"> Role </Label>
+                <Input 
+                type="role"
+                name="role"
+                id="role"
+                placeholder="Role"
                 onChange={onChange}
                 />
                 <Button color="dark" className="mt-2" block>
