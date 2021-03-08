@@ -34,7 +34,7 @@ const AppNavbar = () => {
   }
 
   const authLink = (
-    <div>
+    <div className="row">
       <NavItem>
         {userRole === "MainOwner" ? (
           <Form className="col mt-2">
@@ -70,7 +70,7 @@ const AppNavbar = () => {
   )
 
   const guestLink = (
-    <div>
+    <div className="row">
       <NavItem>
         <RegisterModal />
       </NavItem>

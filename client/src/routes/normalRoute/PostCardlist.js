@@ -18,7 +18,7 @@ const PostCardlist = () => {
   return (
     <div>
       <Helmet title="Home" />
-      <Row>{ posts ? <PostCardOne posts={posts} /> : GrowingSpinner } </Row>
+      <Row> { posts ? <PostCardOne posts={posts} /> : GrowingSpinner } </Row>
     </div>
   )
 }
