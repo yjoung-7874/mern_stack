@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge, Button, Card, CardBody, CardImg, CardTitle, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentSlash, faMouse } from '@fortawesome/free-solid-svg-icons'
+import { faMouse } from '@fortawesome/free-solid-svg-icons'
 
 const PostCardOne = ({posts}) => {
   return (
