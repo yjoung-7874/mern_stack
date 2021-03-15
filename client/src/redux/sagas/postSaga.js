@@ -20,7 +20,7 @@ function* loadPosts() {
       type: POST_LOADING_FAILURE,
       payload: e
     })
-    //yield push("/")
+    yield push("/")
   }
 }
 
